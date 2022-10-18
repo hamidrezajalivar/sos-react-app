@@ -13,6 +13,7 @@ function App() {
         <Routes>
  
             <Route exact path='/' element={<Home />} />
+            {/* <Route path='/articles/article/:id' element={<SingleArticle/>} /> */}
             <Route path='*' element={<NotFound />} />
         </Routes>
     </MainLayout>
