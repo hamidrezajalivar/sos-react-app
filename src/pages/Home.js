@@ -6,8 +6,9 @@ import  Typography  from '@mui/material/Box';
 const Home = () => {
     return (
         <>
-  <Container maxWidth={100} style={{marginTop:"70px"}}>
+  <Container style={{marginTop:"70px",maxWidth:"100%"}}>
           <div className="headContent">
+          
           <Typography sx={{ fontSize: 24 }}>
           مقاله‌ها
           </Typography>

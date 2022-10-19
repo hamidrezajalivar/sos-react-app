@@ -13,14 +13,21 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import {useNavigate} from 'react-router-dom';
 
 const pages = ['صفحه اصلی', 'todo list ', 'مراکز خدمات درمانی','شعبه‌های ما' , 'سوال‌‌های متداول' ];
+const linkPages = ['/', 'todo_list ', 'healthService','OurBranches' , 'questions' ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-  
+    const redirect = useNavigate() 
+    const handleRedirect = (e)=>{
+      redirect(e.target.value)
+      
+        
+}
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
@@ -114,10 +121,12 @@ const Header = () => {
                  <img src="/images/logo.png" alt='logo' className="logo-sm"/>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex space-around' } }}   style={{textAlign:"center",display:"flex",justifyContent:"space-around"}}>
-              {pages.map((page) => (
+         
+              {pages.map((page,index) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  value={linkPages[index]}
+                  onClick={(e)=>handleRedirect(e)}
                   sx={{ my: 2, color: 'black', display: 'block' }}
                 >
                   {page}

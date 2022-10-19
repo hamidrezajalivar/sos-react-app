@@ -1,0 +1,8 @@
+.singlePost{
+    width: 95%;
+    margin: auto;
+}
+.singlePost img{
+    width: 100%;
+    height: 600px;
+}

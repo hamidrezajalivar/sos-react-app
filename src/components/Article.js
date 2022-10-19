@@ -11,22 +11,22 @@ import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 
-const Article = () => {
+const Article = ({post}) => {
     return (
         <>
-        {/* <Link to={`/articles/article/${article.id}`} className='articleItem'> */}
-        <Link to="/" className='articleItem'>
+       <Link to={`/articles/article/${post.id}`} className='articleItem'>
+  
             <Card sx={{ p: 2, m:1, border: 1, borderColor: '#0F5098', borderRadius: '16px' }} >
                 <CardMedia
                     style={{ borderRadius: '16px' }}
                     component="img"
                     alt="green iguana"
                     height="140"
-                    image="images/articles/Media.png"
+                    image={post.image}
                 />
                 <CardContent sx={{ p: 1 }}>
                     <Typography gutterBottom style={{ fontSize: '16px', fontWeight: "bold" }} component="div">
-                        راهنمای دریافت معرفی‌نامه
+                       {post.title}
                     </Typography>
                     <Box sx={{ display: 'flex', flexDirection: 'row', color: '' }}>
                         <AccessTimeIcon />
