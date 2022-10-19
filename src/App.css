@@ -5,9 +5,13 @@ body {
     overflow-x: hidden !important;
 }
 
-body, * {
-    font-family: IRANSans !important;
-}
+@font-face {
+    font-family: IRANSans;
+    src: url("../public/fonts/IRANSansXV.woff2") format('woff2')
+    }
+    body, * {
+        font-family: IRANSans !important;
+    }
 
 .bg-white {
     background-color: white !important;

@@ -2,4 +2,6 @@
     font-family: IRANSans;
     src: url("../fonts/IRANSansXV.woff2") format('woff2')
     }
- 
+    body, * {
+        font-family: IRANSans !important;
+    }
