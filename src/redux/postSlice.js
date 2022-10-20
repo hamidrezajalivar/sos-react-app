@@ -1,8 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
+import { blogList } from './../data';
+
 export const fetchPosts = createAsyncThunk('posts/fetch', async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-  const data = await response.json()
+  const response = await blogList
+  const data = await response
 
   return data
 })
@@ -20,14 +22,8 @@ const postSlice = createSlice({
     [fetchPosts.fulfilled]: (state, action) => {
       state.postList = action.payload
       state.fetchingPosts = false
-    },
-    [fetchPosts.pending]: state => {
-      state.fetchingPosts = true
-    },
-    [fetchPosts.rejected]: state => {
-      state.fetchingPosts = false
-      state.errorMessage = 'Something went wrong...'
     }
+  
   }
 })
 

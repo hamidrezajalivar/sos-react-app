@@ -3,7 +3,7 @@ import './App.css';
 import { Route, BrowserRouter as Router, Routes, useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
-import Blog from './components/Blog';
+import Blog from './pages/Blog';
 import Home from './pages/Home';
 import MainLayout from './layout/MainLayout';
 import NotFound from './components/notfound/NotFound'

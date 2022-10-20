@@ -28,9 +28,9 @@ const Article = ({post}) => {
                     <Typography gutterBottom style={{ fontSize: '16px', fontWeight: "bold" }} component="div">
                        {post.title}
                     </Typography>
-                    <Box sx={{ display: 'flex', flexDirection: 'row', color: '' }}>
-                        <AccessTimeIcon />
-                        <Typography gutterBottom style={{ fontSize: '14px' }} component="div">
+                    <Box sx={{ display: 'flex', flexDirection: 'row', color: '#9E9E9E' }}>
+                        <AccessTimeIcon style={{fontSize:"25px",paddingLeft:"4px"}} />
+                        <Typography gutterBottom style={{ fontSize: '14px',color:"#9E9E9E" }} component="div">
                             5 دقیقه
                         </Typography>
                     </Box>
