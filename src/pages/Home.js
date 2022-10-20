@@ -13,7 +13,7 @@ const Home = () => {
           مقاله‌ها
           </Typography>
 
-            <Link to="">نمایش همه</Link>
+            <Link to="/blogs">نمایش همه</Link>
           </div>
 
            <Articles/>

@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import {useNavigate} from 'react-router-dom';
 
 const pages = ['صفحه اصلی', 'todo list ', 'مراکز خدمات درمانی','شعبه‌های ما' , 'سوال‌‌های متداول' ];
-const linkPages = ['/', 'todo_list ', 'healthService','OurBranches' , 'questions' ];
+const linkPages = ['/', '/todolist', '/healthService','/OurBranches' , '/questions' ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Header = () => {
