@@ -11,12 +11,12 @@ import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 
-const Article = ({post}) => {
+const Article = ({post,onClick}) => {
     return (
         <>
        <Link to={`/articles/article/${post.id}`} className='articleItem'>
   
-            <Card sx={{ p: 2, m:1, border: 1, borderColor: '#0F5098', borderRadius: '16px' }} >
+            <Card sx={{ p: 2, m:1, border: 1, borderColor: '#0F5098', borderRadius: '16px' }}  onClick={onClick}>
                 <CardMedia
                     style={{ borderRadius: '16px' }}
                     component="img"

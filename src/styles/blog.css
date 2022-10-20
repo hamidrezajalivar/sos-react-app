@@ -6,3 +6,17 @@
   .is-visible {
     opacity: 1;
   }
+  .filter{
+    width: 86%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.filter .ant-col{
+  width: 45%;
+}
+@media screen and (max-width: 900px) {
+  .filter .ant-col{
+    width: 100%;
+  }
+}

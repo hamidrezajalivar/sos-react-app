@@ -1,14 +1,14 @@
 import { Fragment, useState } from "react";
 
-import { searchFilter } from "../redux/filterSlice";
-import { useDispatch } from 'react-redux';
+import { useProductACtions } from './contexts/UserContext';
 
 const Search = ({ placeholder,filter }) => {
     const [value, setValue] = useState("");
-    const dispatch = useDispatch();
+    const dispatch = useProductACtions();
     const changeHandler = (e) => {
-       
-        dispatch(searchFilter(e))
+
+        // dispatch({type:"filter",selectedOption:filter});
+        dispatch({ type: "search", event: e })
         setValue(e.target.value);
     }
     return (
